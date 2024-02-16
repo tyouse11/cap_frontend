@@ -1,5 +1,6 @@
 // This component represents a single product card displayed on the product listing page
 // It contains the product image, title, price, and a button to add the product to the cart
+import '../styles/ProductCard.css';
 
 export default function ProductCard ( {product, onAddToCart} ) {
     return (

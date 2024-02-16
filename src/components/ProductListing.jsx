@@ -2,6 +2,7 @@
 // It maps through an array of products and renders a 'ProductCard' for each product
 
 import ProductCard from './ProductCard';
+import '../styles/ProductListing.css';
 
 export default function ProductListing ( {products, onAddToCart} ) {
   return (
