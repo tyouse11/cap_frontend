@@ -1,33 +1,36 @@
-import React, { useState } from 'react';
-//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ProductListing from '../src/components/ProductListing';
-//import Cart from '../src/components/CartItem'
-//import Checkout from '../src/components/Checkout';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
 
-function App() {
- // Mock data for product listing
-  const products = [
-    { id: 1, title: 'Product 1', price: 10, imageUrl: 'https://example.com/product1.jpg' },
-    { id: 2, title: 'Product 2', price: 20, imageUrl: 'https://example.com/product2.jpg' },
-];
+export default function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await axios.get('/products', {
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        console.log('Response data:', response.data); // Log the response to verify
+        setProducts(response.data.products); // Update products state
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    }
+  
+    fetchProducts();
+  }, []);
 
   return (
     <div className="App">
-      <ProductListing products={products} />
-      {/* <Cart /> */}
-      {/* <Checkout /> */}
+      <h1>Products</h1>
+        <ul>
+          {products.map(product => (
+            <li key={product._id}>{product.title} - ${product.price}</li>
+          ))}
+        </ul>
     </div>
-  //    <Router>
-  //    <div className="App">
-  //      <Switch>
-  //        <Route path="/" exact component={ProductListing} />
-  //        <Route path="/cart" component={Cart} />
-  //        <Route path="/checkout" component={Checkout} />
-  //      </Switch>
-  //    </div>
-  //  </Router>
   );
 }
-
-export default App;
