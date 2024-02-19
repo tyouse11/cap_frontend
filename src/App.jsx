@@ -5,6 +5,7 @@ import { data } from 'jquery';
 
 export default function App() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
@@ -22,11 +23,18 @@ export default function App() {
       });
   }, []);
 
+  // Function to add item to cart
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
   return (
-    <div className="product-listing">
-      {products.map(product => (
-        <ProductCard key={product._id} product={product} />
-      ))}
+    <div className="container">
+      <div className="product-listing">
+        {products.map(product => (
+          <ProductCard key={product._id} product={product} onAddToCart={addToCart}/>
+        ))}
+      </div>
     </div>
   );
 }
