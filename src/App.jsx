@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import axios from 'axios';
+import ProductCard from './components/ProductCard';
 import './App.css';
 import { data } from 'jquery';
 
@@ -23,13 +23,10 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Products</h1>
-      <ul>
-        {products.map(product => (
-          <li key={product._id}>{product.title}</li>
-        ))}
-      </ul>
+    <div className="product-listing">
+      {products.map(product => (
+        <ProductCard key={product._id} product={product} />
+      ))}
     </div>
   );
 }
