@@ -1,10 +1,15 @@
 // This component represents the checkout page 
 // It contains the 'CheckoutForm' component and displays a summary of the order
 
-import CheckoutForm from './CheckoutForm';
-import '../styles/Checkout.css'
+export default function Checkout({ cartItems, onRemoveFromCart }) {
+  const handleRemoveFromCart = (item) => {
+    onRemoveFromCart(item);
+  };
 
-export default function Checkout ( {cartItems, onPlaceOrder} ) {
+  const calculateTotalPrice = () => {
+    return cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
+  };
+
   return (
     <div className="checkout">
       <h2>Checkout</h2>
@@ -12,12 +17,18 @@ export default function Checkout ( {cartItems, onPlaceOrder} ) {
         <h3>Order Summary</h3>
         <ul>
           {cartItems.map((item) => (
-            <li key={item.product.id}>{item.product.title} - ${item.product.price * item.quantity}</li>
+            <li key={item.product.id}>
+              {item.product.name} - ${item.product.price} x {item.quantity} = ${item.product.price * item.quantity}
+              <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+            </li>
           ))}
         </ul>
-        <h3>Total: ${cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0)}</h3>
+        <h3>Total: ${calculateTotalPrice()}</h3>
       </div>
-      <CheckoutForm onSubmit={onPlaceOrder} />
+      <form>
+        {/* Shipping and payment form fields */}
+        <button type="submit">Place Order</button>
+      </form>
     </div>
   );
-};
+}

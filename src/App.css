@@ -1,27 +1,240 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.navbar {
+  background-color: #333;
+  color: #fff; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem; 
 }
 
-.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #007bff;
+.navbar-brand {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  text-decoration: none; 
   color: #fff;
+}
+
+.navbar-nav {
+  display: flex; 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.nav-item {
+  margin-right: 8rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #ccc; 
+  cursor: pointer;
+}
+
+.homepage-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #68B0AB;
+}
+
+.welcome-section {
+  text-align: center;
+  padding-bottom: 100px ;
+  padding: 50px;
+  background-image: url("https://cdn.greenfieldpuppies.com/wp-content/uploads/2019/12/puppy-carousel-1-590x538.jpg");
+  border-radius: 80px;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  text-align: center;
+  padding: 80px;
+  background-image: url("https://npr.brightspotcdn.com/dims4/default/a379c2b/2147483647/strip/true/crop/2511x1670+0+0/resize/880x585!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff3%2F0e%2F1c6296ed4508a29c88d1363f38d8%2Fpuppies.jpg");
+  height: 300px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 80px;
+}
+  
+
+.contact-section {
+  padding-top: 20px;
+  text-align: center;
+  background-image: url("https://img1.wsimg.com/isteam/ip/2e090f40-a848-4b2c-9eea-88f82c33b824/cavapoochon%20puppies%20for%20sale%2C%20cavapoochon-0044.jpg");
+  background-size: cover;
+  border-radius: 80px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 300px;
+}
+
+.explore-button,
+.learn-more-button,
+.contact-button {
+  padding: 10px 20px;
+  font-size: 16px;
   border: none;
   border-radius: 4px;
+  background-color: #0f4175;
+  color: #fff;
   cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.explore-button:hover,
+.learn-more-button:hover,
+.contact-button:hover {
+  background-color: #66a3e4;
+  cursor: pointer;
 }
+
+.about-us-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-image: url("https://d.newsweek.com/en/full/2251618/golden-retriever-puppies.jpg?w=1200&f=ab0f420041d215e8d3a3bbbdbaaf2a5e");
+}
+
+.about-us-container h1 {
+  color: whitesmoke;
+}
+
+.about-us-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+}
+
+.cart {
+  margin-top: 20px;
+}
+
+.cart h2 {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.cart-item img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.cart-item h3 {
+  margin: 0 0 5px;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item button {
+  margin-left: auto;
+}
+
+.order-summary {
+  margin-bottom: 20px;
+}
+
+.order-summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-summary li {
+  margin-bottom: 10px;
+}
+
+.order-summary h3 {
+  margin-top: 20px;
+}
+
+.order-summary h3:last-child {
+  margin-top: 0;
+}
+
+.checkout-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkout-form button {
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align items vertically in the center */
+  align-items: center; /* Align items horizontally in the center */
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: rgb(3, 148, 3);
+  margin: 0;
+  font-size: 16px;
+}
+
+.product-card button {
+  display: block;
+  margin-top: 15px;
+}
+
+.product-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  background-color: #203448;
+  color: steelblue
+}
+
+.product-listing .product-card {
+  min-width: 0;
+}
+

@@ -1,7 +1,6 @@
 // This component represents the checkout form when users can enter their shipping and payment info
 
 import React, { useState } from 'react';
-import '../styles/CheckoutForm.css';
 
 export default function CheckoutForm ( {onSubmit} ) {
   const [formData, setFormData] = useState({
