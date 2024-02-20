@@ -8,7 +8,7 @@ import ProductListing from './components/ProductListing';
 import CartItem from './components/CartItem'
 import Checkout from './components/Checkout';
 import Notification from './components/Notification';
-
+import CheckoutForm from './components/CheckoutForm';
 import './App.css';
 
 export default function App() {
@@ -32,34 +32,21 @@ export default function App() {
       });
   }, []);
 
-  // // Function to add item to cart
-  // const addToCart = (product) => {
-  //   // Check if the product is already in the cart
-  //   const existingCartItemIndex = cart.findIndex(item => item.product._id === product._id);
-
-  //   if (existingCartItemIndex !== -1) {
-  //     // If the product is already in the cart, update its quantity
-  //     const updatedCart = [...cart];
-  //     updatedCart[existingCartItemIndex].quantity += 1;
-  //     setCart(updatedCart);
-  //   } else {
-  //     // If the product is not in the cart, add it with a quantity of 1
-  //     setCart([...cart, { product: product, quantity: 1 }]);
-  //   }
-  // };
-
-    // Function to add item to cart
-    const addToCart = (product) => {
-      setCart([...cart, product]);
-      setNotificationMessage('Your puppy has been added to the cart'); // Set notification message
+  const addToCart = (product) => {
+    // Check if the product is already in the cart
+    const isProductInCart = cart.some(item => item.product._id === product._id);
+  
+    // If the product is not in the cart, add it
+    if (!isProductInCart) {
+      setCart([...cart, { product, quantity: 1 }]);
+      setNotificationMessage(`${product.name} has been added to the cart`);
       setTimeout(() => setNotificationMessage(''), 3000); // Clear notification after 3 seconds
-    };
-
-    // Function to remove item from cart
-    const removeFromCart = (itemToRemove) => {
-      const updatedCart = cart.filter(item => item !== itemToRemove);
-      setCart(updatedCart);
-    };
+    } else {
+      // Product is already in the cart, show error message or handle accordingly
+      setNotificationMessage(`${product.name} is already in the cart`);
+      setTimeout(() => setNotificationMessage(''), 3000); // Clear notification after 3 seconds
+    }
+  };
 
   return (
       <div>
@@ -70,6 +57,7 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductListing products={products} onAddToCart={addToCart} />} />
           <Route path="/cart" element={<Checkout cartItems={cart}/>} />
+          <Route path="/checkout-form" element={<CheckoutForm />} />
         </Routes>
       </div>
   );

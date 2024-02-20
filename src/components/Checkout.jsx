@@ -1,34 +1,34 @@
 // This component represents the checkout page 
 // It contains the 'CheckoutForm' component and displays a summary of the order
 
-export default function Checkout({ cartItems, onRemoveFromCart }) {
-  const handleRemoveFromCart = (item) => {
-    onRemoveFromCart(item);
-  };
+import CheckoutForm from './CheckoutForm';
+import { Link } from 'react-router-dom';
 
-  const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
-  };
-
+export default function Checkout({ cartItems, onPlaceOrder }) {
   return (
     <div className="checkout">
-      <h2>Checkout</h2>
+      <h2 className="checkout-heading">Checkout</h2>
       <div className="order-summary">
-        <h3>Order Summary</h3>
-        <ul>
+        <h3 className="order-summary-heading">Order Summary</h3>
+        <ul className="order-summary-list">
           {cartItems.map((item) => (
-            <li key={item.product.id}>
-              {item.product.name} - ${item.product.price} x {item.quantity} = ${item.product.price * item.quantity}
-              <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+            <li key={item.product._id} className="order-summary-item">
+              <span className="item-name">{item.product.name}</span> - ${item.product.price * item.quantity}
             </li>
           ))}
         </ul>
-        <h3>Total: ${calculateTotalPrice()}</h3>
+        <h3 className="order-total">
+          Total: $
+          {cartItems.reduce(
+            (total, item) => total + item.product.price * item.quantity,
+            0
+          )}
+        </h3>
       </div>
-      <form>
-        {/* Shipping and payment form fields */}
-        <button type="submit">Place Order</button>
-      </form>
+      {/* <CheckoutForm onSubmit={onPlaceOrder} /> */}
+      <Link to="/checkout-form" className="checkout-button">
+         <button className="checkout-btn">Checkout</button>
+      </Link>
     </div>
   );
 }

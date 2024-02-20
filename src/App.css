@@ -125,58 +125,69 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.cart {
-  margin-top: 20px;
+.checkout {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.cart h2 {
+.checkout-heading {
   margin-bottom: 20px;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-}
-
-.cart-item img {
-  max-width: 100px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.cart-item h3 {
-  margin: 0 0 5px;
-}
-
-.cart-item p {
-  margin: 0;
-}
-
-.cart-item button {
-  margin-left: auto;
+  font-size: 24px;
+  color: #333;
 }
 
 .order-summary {
-  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.order-summary ul {
+.order-summary-heading {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.order-summary-list {
   list-style-type: none;
   padding: 0;
 }
 
-.order-summary li {
+.order-summary-item {
   margin-bottom: 10px;
 }
 
-.order-summary h3 {
-  margin-top: 20px;
+.item-name {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.order-summary h3:last-child {
-  margin-top: 0;
+.order-total {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.checkout-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0f4175;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #66a3e4;
 }
 
 .checkout-form input {
@@ -189,6 +200,17 @@ body {
 
 .checkout-form button {
   width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout-form button:hover {
+  background-color: #555;
 }
 
 .product-card {
