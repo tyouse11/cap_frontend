@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { BsCart } from 'react-icons/bs';
 
-export default function Nav( { cartItem } ) {
+export default function Nav( { cart} ) {
   // Calculate the total number of items in the cart
-  const totalItems = cartItem.reduce((acc, item) => acc + item.quantity, 0);
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <nav className="navbar">

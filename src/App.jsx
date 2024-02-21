@@ -12,7 +12,7 @@ import './App.css';
 export default function App() {
   const [products, setProducts] = useState([]);
   const [notificationMessage, setNotificationMessage] = useState('');
-  const [cartItem, setCartItem] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
@@ -32,11 +32,11 @@ export default function App() {
 
   const addToCart = (product) => {
     // Check if the product is already in the cart
-    const isProductInCart = cartItem.some(item => item.product._id === product._id);
+    const isProductInCart = cart.some(item => item.product._id === product._id);
   
     // If the product is not in the cart, add it
     if (!isProductInCart) {
-      setCartItem([...cart, { product, quantity: 1 }]);
+      setCart([...cart, { product, quantity: 1 }]);
       setNotificationMessage(`${product.name} has been added to the cart`);
       setTimeout(() => setNotificationMessage(''), 3000); // Clear notification after 3 seconds
     } else {
@@ -48,20 +48,20 @@ export default function App() {
 
   // Function to remove item from cart
   const handleRemoveItem = (itemToRemove) => {
-    const updatedCart = cartItem.filter(item => item !== itemToRemove);
-    setCartItem(updatedCart);
+    const updatedCart = cart.filter(item => item !== itemToRemove);
+    setCart(updatedCart);
   };
 
   return (
       <div>
-        <Navigation cartItem={cartItem}/>
+        <Navigation cart={cart}/>
         <Notification message={notificationMessage} />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductListing products={products} onAddToCart={addToCart} />} />
-          <Route path="/cart" element={<Cart cartItem={cartItem} onRemoveItem={handleRemoveItem} />} />
-          <Route path="/checkout-form" element={<CheckoutForm />} />
+          <Route path="/cart" element={<Cart cart={cart} onRemoveItem={handleRemoveItem} />} />
+          <Route path="/checkout-form" element={<CheckoutForm cart={cart} />} />
         </Routes>
       </div>
   );
