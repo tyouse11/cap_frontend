@@ -1,8 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsCart } from 'react-icons/bs';
 
-export default function Nav() {
+export default function Nav( { cartItem } ) {
+  // Calculate the total number of items in the cart
+  const totalItems = cartItem.reduce((acc, item) => acc + item.quantity, 0);
+
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-brand">Puppy Lovers</Link>
@@ -16,9 +18,12 @@ export default function Nav() {
         <li className="nav-item">
           <Link to="/products" className="nav-link">Puppies</Link>
         </li>
-        <li className="nav-cart-item">
+        <li className="nav-cart-icon">
           <Link to="/cart" className="nav-link">
-            <BsCart />
+          <div>
+              <BsCart className="cart-icon" />
+              {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+            </div>
           </Link>
         </li>
       </ul>

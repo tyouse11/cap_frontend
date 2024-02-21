@@ -7,7 +7,6 @@ export default function CheckoutForm ( {onSubmit} ) {
     name: '',
     email: '',
     address: '',
-    // Add more fields as needed
   });
 
   const handleChange = (e) => {

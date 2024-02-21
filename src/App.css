@@ -2,6 +2,7 @@ body {
   font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #30918a;
 }
 
 .navbar {
@@ -17,7 +18,7 @@ body {
   font-size: 1.5rem; 
   font-weight: bold; 
   text-decoration: none; 
-  color: #fff;
+  color: #f4f00d;
 }
 
 .navbar-nav {
@@ -29,6 +30,10 @@ body {
 
 .nav-item {
   margin-right: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-link {
@@ -39,6 +44,22 @@ body {
 .nav-link:hover {
   color: #ccc; 
   cursor: pointer;
+}
+
+.nav-cart-icon {
+  font-size: 24px;
+  margin-right: 2rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  background-color: white;
+  color: blue;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 50%;
 }
 
 .homepage-container {
@@ -107,31 +128,45 @@ body {
 }
 
 .about-us-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-image: url("https://d.newsweek.com/en/full/2251618/golden-retriever-puppies.jpg?w=1200&f=ab0f420041d215e8d3a3bbbdbaaf2a5e");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
+
 .about-us-container h1 {
-  color: whitesmoke;
+  color: white;
 }
 
 .about-us-container p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
-  color: rgb(255, 255, 255);
+  color: #f4f00d;
+  font-weight: bold;
+  text-align: center;
 }
 
-.checkout {
+.cart {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  
 }
 
-.checkout-heading {
+.cart-heading {
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
@@ -155,11 +190,27 @@ body {
 }
 
 .order-summary-item {
+  display: flex; 
+  align-items: center;
   margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+.product-image {
+  width: 70px; 
+  height: 70px; 
+  margin-right: 10px; 
+  border-radius: 5px;
+  margin-left: 25px;
 }
 
 .item-name {
   font-weight: bold;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.item-price {
   margin-right: 10px;
 }
 
@@ -170,9 +221,26 @@ body {
   color: #333;
 }
 
+.remove-btn {
+  display: flex;
+  align-items: center;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer; 
+  margin-left: auto;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
 .checkout-button {
   display: inline-block;
   text-decoration: none;
+  margin: 15px;
 }
 
 .checkout-btn {
@@ -216,8 +284,8 @@ body {
 .product-card {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Align items vertically in the center */
-  align-items: center; /* Align items horizontally in the center */
+  justify-content: center;
+  align-items: center; 
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -246,6 +314,21 @@ body {
 .product-card button {
   display: block;
   margin-top: 15px;
+  margin-bottom: 15px;
+  width: 50%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(235, 217, 13);
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.product-card button:hover {
+  background-color: #e3ca0cec;
+  color: white;
 }
 
 .product-listing {
