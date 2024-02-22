@@ -1,12 +1,10 @@
 // This component represents the checkout form where users can enter their shipping and payment info
 
-// This component represents the checkout form where users can enter their shipping and payment info
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import OrderSummary from './OrderSummary';
 
-export default function CheckoutForm({ cart }) {
+export default function CheckoutForm({ cart, setCart }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -68,6 +66,9 @@ export default function CheckoutForm({ cart }) {
       if (!response.ok) {
         throw new Error('Failed to place order');
       }
+
+      setCart([]);
+      console.log('Cart after order placement:', cart);
 
       // If order is placed successfully
       console.log('Order placed successfully');

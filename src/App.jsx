@@ -38,11 +38,11 @@ export default function App() {
     if (!isProductInCart) {
       setCart([...cart, { product, quantity: 1 }]);
       setNotificationMessage(`${product.name} has been added to the cart`);
-      setTimeout(() => setNotificationMessage(''), 3000); // Clear notification after 3 seconds
+      setTimeout(() => setNotificationMessage(''), 7000); // Clear notification after 5 seconds
     } else {
       // Product is already in the cart, show error message or handle accordingly
       setNotificationMessage(`${product.name} is already in the cart`);
-      setTimeout(() => setNotificationMessage(''), 3000); // Clear notification after 3 seconds
+      setTimeout(() => setNotificationMessage(''), 7000); // Clear notification after 5 seconds
     }
   };
 
@@ -61,7 +61,7 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductListing products={products} onAddToCart={addToCart} />} />
           <Route path="/cart" element={<Cart cart={cart} onRemoveItem={handleRemoveItem} />} />
-          <Route path="/checkout-form" element={<CheckoutForm cart={cart} />} />
+          <Route path="/checkout-form" element={<CheckoutForm cart={cart} setCart={setCart} />} />
         </Routes>
       </div>
   );

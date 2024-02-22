@@ -6,7 +6,7 @@ export default function Notification({ message }) {
   useEffect(() => {
     if (message) {
       setShow(true);
-      setTimeout(() => setShow(false), 9000);
+      setTimeout(() => setShow(false), 7000);
     }
   }, [message]);
 

@@ -220,6 +220,20 @@ body {
   min-width: 0;
 }
 
+.notification {
+  display: none;
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+  display: inline-block;
+  opacity: 1;
+}
+
 .cart {
   text-align: center;
   border: 1px solid #ccc;
