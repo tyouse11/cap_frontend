@@ -1,10 +1,12 @@
-# React + Vite
+# Youse_Tiffany_PuppyApp_Capstone
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<div align="center">
+    [![Contributors][contributors-shield]][contributors-url]
+    [![Stargazers][stars-shield]][stars-url]
+    [![LinkedIn][linkedin-shield]][linkedin-url]
+</div>
 
 <!-- PROJECT LOGO -->
 <br />
