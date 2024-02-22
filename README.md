@@ -54,6 +54,49 @@
 <!-- ABOUT THE PROJECT -->
 ### About This project 
 
+This projects acts as a store that sells puppies.
+
+This project is a full-stack web application using MongoDB, Express, React, and Node (MERN) with the following requirements:
+
+Your project folder should be named as follows, for submission:
+LastName_FirstName_ProjectName_Capstone
+
+(20%) Project Structure, Standardization, and Convention:
+- Project is organized into appropriate files and directories, following best practices
+- Project contains an appropriate level of comments
+- Project is pushed to GitHub, and contains a README file that documents the project, including an overall description of the project
+- Standard naming conventions are used throughout the project
+- Ensure that the program runs without errors
+- Level of effort displayed in creativity, presentation, and user experience
+
+(12%) Core JavaScript
+- Demonstrate proper usage of ES6 syntax and tools
+- Use functions and classes to adhere to the DRY principle
+- Use Promises and async/await, where appropriate
+- Use Axios or fetch to retrieve data from an API
+- Use sound programming logic throughout the application
+- Use appropriate exception handling
+
+(9%) Database
+- Use MongoDB to create a database for your application
+- Apply appropriate indexes to your database collections
+- Create reasonable schemas for your data by following data modeling best practices
+
+(19%) Server
+- Create a RESTful API using Node and Express.
+- Include API routes for all four CRUD operations
+- Utilize the native MongoDB driver or Mongoose to interface with your database
+- Include at least one form of user authentication/authorization within the application
+
+(35%) Front-End Development
+- Use React to create the application’s front-end
+- Use CSS to style the application
+- Create at least four different views or pages for the application
+- Create some form of navigation that is included across the application’s pages, utilizing React Router for page rendering
+- Use React Hooks or Redux for application state management
+- Interface directly with the server and API that you created
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -62,9 +105,6 @@
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-* [![Mongoose][Mongoosejs.com]][Mongoose-url]
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,12 +113,8 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -147,26 +183,16 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/tyouse11/cap_frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/tyouse11/cap_frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tyouse11/cap_frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/tyouse11/cap_frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/tyouse11/cap_frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/tyouse11/cap_frontend/stargazers
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tiffany-youse/
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[Mongoose.com]: 
-[Mongoose-url]: https://mongoosejs.com/ 
