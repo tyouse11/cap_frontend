@@ -1,5 +1,4 @@
-// This component represents the cart page 
-// It displays a summary of the order
+// This component represents the cart page that displays a summary of the order
 
 import { Link } from 'react-router-dom';
 import OrderSummary from './OrderSummary';

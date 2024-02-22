@@ -14,7 +14,6 @@ export default function CheckoutForm({ cart, setCart }) {
     zip: ''
   });
 
-  // State for form errors
   const [formErrors, setFormErrors] = useState({});
 
   // Function to handle form field changes
@@ -67,9 +66,6 @@ export default function CheckoutForm({ cart, setCart }) {
         throw new Error('Failed to place order');
       }
 
-      setCart([]);
-      console.log('Cart after order placement:', cart);
-
       // If order is placed successfully
       console.log('Order placed successfully');
       alert('Order placed successfully!');
@@ -99,7 +95,7 @@ export default function CheckoutForm({ cart, setCart }) {
     // If no errors, handle placing the order
     await handlePlaceOrder();
   
-    // Reset form data and errors after successful submission
+    // Reset form data, cart, and errors after successful submission
     setFormData({
       name: '',
       email: '',
@@ -109,6 +105,7 @@ export default function CheckoutForm({ cart, setCart }) {
       zip: ''
     });
     setFormErrors({});
+    setCart([]);
   };
   
 
