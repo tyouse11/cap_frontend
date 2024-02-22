@@ -1,17 +1,23 @@
 # Youse_Tiffany_PuppyApp_Capstone
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a name="readme-top"></a>
 
-    [![Contributors][contributors-shield]][contributors-url]
-    [![Stargazers][stars-shield]][stars-url]
-    [![LinkedIn][linkedin-shield]][linkedin-url]
+<!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/tyouse11">
-    <img src="./src/images/welcome.png" alt="App" width="80" height="80">
+    <img src="./src/images/welcome.png" alt="App">
   </a>
 
   <h3 align="center"></h3>
