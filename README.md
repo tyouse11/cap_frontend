@@ -2,17 +2,16 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
-<div align="center">
     [![Contributors][contributors-shield]][contributors-url]
     [![Stargazers][stars-shield]][stars-url]
     [![LinkedIn][linkedin-shield]][linkedin-url]
-</div>
+
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/tyouse11">
-    <img src="/front_end/src/images/welcome.png" alt="Logo" width="80" height="80">
+    <img src="./src/images/welcome.png" alt="App" width="80" height="80">
   </a>
 
   <h3 align="center"></h3>
